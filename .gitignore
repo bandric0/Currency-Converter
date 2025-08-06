@@ -1,0 +1,53 @@
+# .NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.user
+*.cache
+*.suo
+*.userprefs
+*.sln.docstates
+.vs/
+*.swp
+*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio 2019/2022 cache/options directory
+.vs/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker volumes
+mongo-data/
