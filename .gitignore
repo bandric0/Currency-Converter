@@ -51,3 +51,34 @@ artifacts/
 
 # Docker volumes
 mongo-data/
+
+# Flutter/Dart
+frontend/.dart_tool/
+frontend/.packages
+frontend/.pub-cache/
+frontend/.pub/
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.metadata
+frontend/*.iml
+frontend/*.ipr
+frontend/*.iws
+frontend/.idea/
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/android/*.iml
+frontend/ios/Flutter/Flutter.framework
+frontend/ios/Flutter/Generated.xcconfig
+frontend/ios/Flutter/app.flx
+frontend/ios/Flutter/app.zip
+frontend/ios/Flutter/flutter_assets/
+frontend/ios/Flutter/flutter_export_environment.sh
+frontend/ios/ServiceDefinitions.json
+frontend/ios/Runner/GeneratedPluginRegistrant.*
+
+# Miscellaneous
+*.log
+*.lock
+.history
+.svn/

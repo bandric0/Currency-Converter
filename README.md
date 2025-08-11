@@ -1,6 +1,6 @@
 # Currency Converter
 
-A currency converter application with a .NET Core backend API that uses MongoDB for caching exchange rates and integrates with Fixer.io API for real-time currency data.
+A full-stack currency converter application with a Flutter mobile frontend and a .NET Core backend API that uses MongoDB for caching exchange rates and integrates with Fixer.io API for real-time currency data.
 
 ## Backend Setup
 
@@ -98,3 +98,116 @@ A currency converter application with a .NET Core backend API that uses MongoDB 
 
 - The free Fixer.io plan only allows EUR as base currency. The app automatically handles currency conversion calculations.
 - Exchange rates are cached by currency pair and date to minimize API calls.
+
+## Frontend Setup (Flutter Mobile App)
+
+### Prerequisites
+
+- Flutter SDK (3.0 or higher)
+- Android Studio / Xcode (for mobile development)
+- Android SDK / iOS development tools
+
+### Installation
+
+1. **Navigate to the frontend directory**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Configure the API endpoint**
+   - Update the API URL in `lib/services/currency_service.dart` to point to your backend
+   - Default: `http://localhost:5124` (for local development)
+   - For mobile device testing, use your computer's IP address instead of localhost
+
+### Running the Application
+
+1. **Run on Android Emulator/Device**
+   ```bash
+   flutter run
+   ```
+
+2. **Build APK for Android**
+   ```bash
+   flutter build apk
+   ```
+
+3. **Build for iOS** (Mac only)
+   ```bash
+   flutter build ios
+   ```
+
+### Features
+
+- Clean and intuitive Material Design UI
+- Real-time currency conversion
+- Support for multiple currencies
+- Swap currencies functionality
+- Error handling and validation
+- Responsive design for different screen sizes
+
+## Project Structure
+
+```
+Currency-Converter/
+├── backend/
+│   └── CurrencyConverter.API/     # .NET Core Web API
+│       ├── Controllers/           # API endpoints
+│       ├── Models/               # Data models
+│       ├── Services/             # Business logic
+│       └── Settings/             # Configuration classes
+├── frontend/
+│   └── lib/
+│       ├── main.dart            # App entry point
+│       ├── screens/             # UI screens
+│       ├── services/            # API integration
+│       └── models/              # Data models
+└── README.md
+
+```
+
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/Currency-Converter.git
+   cd Currency-Converter
+   ```
+
+2. **Set up the backend** (follow Backend Setup section above)
+
+3. **Set up the frontend** (follow Frontend Setup section above)
+
+4. **Run both applications**
+   - Start the backend API first
+   - Then run the Flutter app
+
+## Configuration
+
+### Important: API Key Security
+
+Before pushing to a public repository:
+1. Replace the API key in `appsettings.json` with a placeholder
+2. Use environment variables or a `.env` file for local development
+3. Never commit real API keys to version control
+
+### MongoDB Connection
+
+- Local: `mongodb://localhost:27017`
+- Atlas: Update with your connection string
+
+## Technologies Used
+
+- **Frontend**: Flutter, Dart, Material Design
+- **Backend**: .NET 8, C#, ASP.NET Core Web API
+- **Database**: MongoDB
+- **External API**: Fixer.io
+- **Tools**: Visual Studio Code, Android Studio
+
+## License
+
+This project is open source and available under the MIT License.
